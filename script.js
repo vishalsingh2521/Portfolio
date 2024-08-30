@@ -43,4 +43,3 @@ serviceItems.forEach((item, index) => {
         });
     });
 });
-
