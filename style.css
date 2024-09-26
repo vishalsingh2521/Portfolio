@@ -4,6 +4,8 @@
     box-sizing: border-box;
     scrollbar-width: thin;
     font-family: "Sora", sans-serif;
+    scrollbar-color: #8750f7 #2a1454;
+    scroll-behavior: smooth;
 }
 
 body a {
@@ -17,7 +19,7 @@ body a {
     display: flex;
     justify-content: space-between;
     padding: 2rem 2rem 1rem;
-    background: linear-gradient(90deg, rgba(15,7,21,1) 16%, rgba(16,8,24,1) 51%, rgba(39,22,67,1) 82%);
+    background: linear-gradient(90deg, rgba(15, 7, 21, 1) 16%, rgba(16, 8, 24, 1) 51%, rgba(39, 22, 67, 1) 82%);
 }
 
 .head-left img {
@@ -97,18 +99,19 @@ a.btn {
 a.btn:hover {
     background-position: -100%;
 }
+
 /*------header end------*/
 
 /*----------------first conatiner start*----------------*/
 .intro {
-    padding: 2rem 2rem 1rem;
+    padding: 2rem 2rem;
     background: linear-gradient(90deg, rgba(15, 7, 21, 1) 16%, rgba(16, 8, 24, 1) 51%, rgba(39, 22, 67, 1) 82%);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.content-box{
+.content-box {
     width: 50%;
 }
 
@@ -117,8 +120,8 @@ a.btn:hover {
     font-size: 32px;
 }
 
-.grad-txt{
-    background-image: linear-gradient(to right, #8750f7 0%, #ffffff 65%);
+.grad-txt {
+    background-image: linear-gradient(to right, #8750f7 33%, #ffffff 84%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -139,6 +142,7 @@ a.btn:hover {
     border: 3px solid #2a1454;
     transform: rotate(4deg);
     transition: 0.5s ease;
+    width: 420px;
 }
 
 .img-box {
@@ -184,12 +188,13 @@ a.btn:hover {
     justify-content: space-around;
     width: 40%;
 }
+
 /*----------------first conatiner end*----------------*/
 
 /*----------------counter section start*----------------*/
 
 .counter {
-    padding: 2rem 2rem 1rem;
+    padding: 4rem 2rem;
     background: linear-gradient(90deg, rgba(15, 7, 21, 1) 16%, rgba(16, 8, 24, 1) 51%, rgba(39, 22, 67, 1) 82%);
     display: flex;
     justify-content: space-around;
@@ -211,6 +216,7 @@ a.btn:hover {
     color: #fff;
     font-size: 18px;
 }
+
 /*----------------counter section end*----------------*/
 
 /*----------------services section starts*----------------*/
@@ -218,7 +224,7 @@ a.btn:hover {
 .services-main {
     background: #050709;
     text-align: center;
-    padding: 4rem 2rem 1rem;
+    padding: 4rem 2rem;
 }
 
 
@@ -226,12 +232,12 @@ a.btn:hover {
     color: #dddddd;
     font-size: 16px;
     padding: 1rem 0;
-    width: 50%;
+    width: 58%;
     margin: 0 auto 2rem;
     line-height: 1.5;
 }
 
-.services-main h2.grad-txt {
+h2.grad-txt {
     font-size: 45px;
 }
 
@@ -243,7 +249,7 @@ a.btn:hover {
     position: relative;
     overflow: hidden;
     transition: background-color 0.5s ease;
-    width: 90%;
+    width: 95%;
     margin: 20px auto;
     border: 1px solid #8b56f7;
     border-radius: 10px;
@@ -298,4 +304,318 @@ a.btn:hover {
     align-items: center;
     text-align: left;
     column-gap: 20px;
+}
+
+/*----------------services section ends*----------------*/
+
+/*--------------experience section starts*--------------*/
+.experience {
+    background: linear-gradient(90deg, rgba(15, 7, 21, 1) 16%, rgba(16, 8, 24, 1) 51%, rgba(39, 22, 67, 1) 82%);
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-experience {
+    width: 48%;
+}
+
+.my-education {
+    width: 48%;
+}
+
+.ex-head {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.ex-head i {
+    font-size: 45px;
+    color: #BB9BFB;
+}
+
+.ex-box {
+    background: #341e4a;
+    padding: 1.25rem 2rem;
+    border-radius: 20px;
+    width: 80%;
+    line-height: 1.8;
+    transition: 0.5s ease-in-out;
+    background-color: #341e4a;
+    /* Solid background color */
+    position: relative;
+    /* Important for pseudo-element positioning */
+    cursor: pointer;
+    overflow: hidden;
+    /* To hide the gradient overflow */
+    transition: background-color 0.4s ease;
+    /* Smooth color transition */
+    margin: 2rem 0;
+}
+
+/* Pseudo-element for the gradient */
+.ex-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(260deg, #2a1454 0%, #8750f7 100%);
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.4s ease;
+    /* Smooth opacity transition */
+    z-index: 0;
+    /* Make sure it's behind the text */
+}
+
+.ex-box:hover {
+    background-color: #341e4a;
+    /* Keep solid color the same */
+}
+
+.ex-box:hover::before {
+    opacity: 1;
+    /* Show the gradient smoothly on hover */
+}
+
+/* Ensure text and other content stays above the gradient */
+.ex-box p,
+.ex-box h6,
+.ex-box h5 {
+    position: relative;
+    z-index: 1;
+}
+
+.ex-box h6 {
+    color: #8750f7;
+    font-size: 22px;
+}
+
+.ex-box:hover h6 {
+    color: #fff;
+    /* Change h6 color to white on hover */
+}
+
+.ex-box h5 {
+    color: #fff;
+    font-size: 28px;
+}
+
+.ex-box p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/*--------------experience section ends*--------------*/
+
+/*--------------skills section starts*--------------*/
+
+.skills {
+    padding: 4rem 2rem;
+    background: #050709;
+    text-align: center;
+}
+
+.skills p {
+    color: #dddddd;
+    font-size: 16px;
+    padding: 1rem 0;
+    width: 58%;
+    margin: 0 auto 2rem;
+    line-height: 1.5;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.icon {
+    padding: 20px 35px;
+    background: #140c1c;
+    text-align: center;
+    border-radius: 25px;
+    width: 15%;
+    filter: grayscale(0.8);
+    border: 1px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.icon p {
+    margin: 15px 0 0 0;
+    padding: 0;
+    width: auto;
+}
+
+.icon img {
+    width: 75px;
+    transition: 0.3s ease-in-out;
+}
+
+.icon:hover {
+    background: #2A1454;
+    filter: grayscale(0);
+}
+
+.icon:hover img {
+    scale: 1.2;
+}
+
+/*--------------skills section ends*--------------*/
+
+/*--------------contact section starts*--------------*/
+.contact {
+    background: linear-gradient(90deg, rgba(15, 7, 21, 1) 16%, rgba(16, 8, 24, 1) 51%, rgba(39, 22, 67, 1) 82%);
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-main {
+    background: #271643;
+    padding: 2rem;
+    width: 48%;
+    border-radius: 15px;
+}
+
+.form-main p {
+    color: #dddddd;
+    font-size: 16px;
+    padding: 1rem 0;
+    width: 90%;
+    margin: 0 0 2rem;
+    line-height: 1.5;
+}
+
+.contact input {
+    width: 48%;
+    margin-bottom: 15px;
+    background: #050709;
+    border: 1px solid #22272c;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 8px;
+    transition: all 0.3s 0s ease-out;
+    outline: none;
+}
+
+.int {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact input:focus,
+textarea:focus {
+    border-color: #8750f7;
+}
+
+textarea {
+    width: 100%;
+    background: #050709;
+    border: 1px solid #22272c;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 8px;
+    transition: all 0.3s 0s ease-out;
+    outline: none;
+    resize: none;
+}
+
+form button {
+    padding: 12px 35px;
+    background-image: linear-gradient(to right, #8750f7 0%, #2a1454 51%, #8750f7 100%);
+    color: #fff;
+    border-radius: 30px;
+    background-size: 200% auto;
+    transition: 0.5s;
+    border: transparent;
+    margin-top: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-position: -100%;
+}
+
+.info-child {
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+    margin: 0 auto;
+}
+
+.info {
+    width: 48%;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    color: #fff;
+}
+
+.social i {
+    background-image: linear-gradient(161deg, #2a1454 0%, #8750f7 100%);
+    padding: 18px;
+    border-radius: 30px;
+    font-size: 22px;
+}
+
+.numbers {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.numbers a {
+    color: #fff;
+    transition: 0.5s ease-in-out;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.numbers a:hover {
+    color: #8750f7;
+}
+
+.social-icon i {
+    background-image: linear-gradient(161deg, #2a1454 0%, #8750f7 100%);
+    padding: 13px 14px;
+    border-radius: 30px;
+    font-size: 28px;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icon {
+    display: flex;
+    column-gap: 20px;
+}
+
+.social-icon i:hover {
+    color: #7343D4;
+    background: #fff;
+}
+
+.social-details h5 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 16px;
 }
