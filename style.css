@@ -17,7 +17,7 @@ body a {
 }
 
 
-/*------header start------*/
+/*-------------------header start----------------------*/
 
 .container {
     display: flex;
@@ -104,7 +104,58 @@ a.btn:hover {
     background-position: -100%;
 }
 
-/*------header end------*/
+/*-----toggle button css*-----*/
+.toggle {
+    position: relative;
+    width: 70px;
+    height: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    display: none;
+}
+
+.toggle span {
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    border-radius: 4px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.toggle span:nth-child(2) {
+    transform: translateY(-15px);
+    width: 25px;
+    right: 15px;
+}
+
+.toggle span:nth-child(3) {
+    transform: translateY(15px);
+    width: 25px;
+    right: 15px;
+}
+
+.toggle.active span:nth-child(1) {
+    transform: translateX(60px);
+}
+
+.toggle.active span:nth-child(2) {
+    width: 40px;
+    transform: translateX(0) rotate(45deg);
+    transition-delay: 0.2s;
+}
+
+.toggle.active span:nth-child(3) {
+    width: 40px;
+    transform: translateX(0) rotate(-45deg);
+    transition-delay: 0.4s;
+}
+
+/*-----------------header end---------------------*/
 
 /*----------------first conatiner start*----------------*/
 .intro {
@@ -667,12 +718,25 @@ textarea.error {
 
     /*--------------header section starts*--------------*/
 
+    .head-left {
+        width: 100%;
+        justify-content: space-between;
+    }
+
     .head-right {
         display: none;
     }
 
     .container {
         padding: 1rem;
+    }
+
+    a.pmail {
+        display: none
+    }
+
+    .toggle {
+        display: flex;
     }
 
     /*--------------header section ends*--------------*/
@@ -762,6 +826,7 @@ textarea.error {
 
     .services-main p {
         width: 100%;
+        font-size: 14px;
     }
 
     .services-main {
@@ -847,7 +912,7 @@ textarea.error {
 
     /*--------------skills section ends*--------------*/
 
-    /*--------------skills section starts*--------------*/
+    /*--------------contact section starts*--------------*/
 
     .contact {
         padding: 2rem 1rem;
@@ -868,6 +933,7 @@ textarea.error {
 
     .contact input {
         width: 100%;
+        font-size: 14px;
     }
 
     .info {
@@ -880,7 +946,7 @@ textarea.error {
         margin: 0;
     }
 
-    /*--------------skills section ends*--------------*/
+    /*--------------contact section ends*--------------*/
 
     /*--------------footer section starts*--------------*/
 
@@ -895,5 +961,60 @@ textarea.error {
     footer .head-right ul {
         width: 100%;
         justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 399px) {
+    .content-box h1 {
+        font-size: 30px;
+    }
+
+    /*--------------experience section starts*--------------*/
+    h2.grad-txt {
+        font-size: 26px;
+    }
+
+    .number {
+        font-size: 20px;
+    }
+
+    .service-dis h3 {
+        font-size: 20px;
+    }
+
+    .ex-box h6 {
+        font-size: 18px;
+    }
+
+    .ex-box h5 {
+        font-size: 20px;
+    }
+
+    .ex-box p {
+        font-size: 14px;
+    }
+
+    /*--------------experience section ends*--------------*/
+
+    /*--------------contact section starts*--------------*/
+
+    .social i {
+        font-size: 18Spx
+    }
+
+    .numbers a {
+        font-size: 16px;
+    }
+
+    .social-icon i {
+        font-size: 25px;
+    }
+
+    /*--------------contact section ends*--------------*/
+}
+
+@media only screen and (max-width: 367px) {
+    h2.grad-txt {
+        font-size: 24px;
     }
 }

@@ -49,7 +49,7 @@ serviceItems.forEach((item, index) => {
 
 //<!-- Validation Script -->
 
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Get form elements
     const form = document.getElementById('contactForm');
     const firstName = document.getElementById('firstName');
@@ -69,30 +69,30 @@ serviceItems.forEach((item, index) => {
 
     // Function to show or hide error messages
     function showError(inputElement, errorElement, message) {
-      inputElement.classList.add('error');
-      errorElement.textContent = message;
-      errorElement.style.display = 'block';
+        inputElement.classList.add('error');
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
     }
 
     function hideError(inputElement, errorElement) {
-      inputElement.classList.remove('error');
-      errorElement.style.display = 'none';
+        inputElement.classList.remove('error');
+        errorElement.style.display = 'none';
     }
 
     // Prevent invalid characters in name fields (only alphabets)
     function validateNameInput(e) {
-      if (!nameRegex.test(e.key)) {
-        e.preventDefault();
-      }
+        if (!nameRegex.test(e.key)) {
+            e.preventDefault();
+        }
     }
 
     // First Name Validation
-    firstName.addEventListener('input', function() {
-      if (!nameRegex.test(firstName.value)) {
-        showError(firstName, firstNameError, 'Only alphabets are allowed.');
-      } else {
-        hideError(firstName, firstNameError);
-      }
+    firstName.addEventListener('input', function () {
+        if (!nameRegex.test(firstName.value)) {
+            showError(firstName, firstNameError, 'Only alphabets are allowed.');
+        } else {
+            hideError(firstName, firstNameError);
+        }
     });
 
     // Prevent typing invalid characters in the name fields
@@ -100,58 +100,66 @@ serviceItems.forEach((item, index) => {
     lastName.addEventListener('keypress', validateNameInput);
 
     // Last Name Validation
-    lastName.addEventListener('input', function() {
-      if (!nameRegex.test(lastName.value)) {
-        showError(lastName, lastNameError, 'Only alphabets are allowed.');
-      } else {
-        hideError(lastName, lastNameError);
-      }
+    lastName.addEventListener('input', function () {
+        if (!nameRegex.test(lastName.value)) {
+            showError(lastName, lastNameError, 'Only alphabets are allowed.');
+        } else {
+            hideError(lastName, lastNameError);
+        }
     });
 
     // Phone Number Validation
-    phoneNumber.addEventListener('input', function() {
-      if (!/^\d*$/.test(phoneNumber.value) || phoneNumber.value.length > 10) {
-        showError(phoneNumber, phoneError, 'Please enter a valid 10-digit phone number.');
-      } else if (phoneNumber.value.length === 10) {
-        hideError(phoneNumber, phoneError);
-      }
+    phoneNumber.addEventListener('input', function () {
+        if (!/^\d*$/.test(phoneNumber.value) || phoneNumber.value.length > 10) {
+            showError(phoneNumber, phoneError, 'Please enter a valid 10-digit phone number.');
+        } else if (phoneNumber.value.length === 10) {
+            hideError(phoneNumber, phoneError);
+        }
     });
 
     // Email Validation
-    emailAddress.addEventListener('input', function() {
-      if (!emailRegex.test(emailAddress.value)) {
-        showError(emailAddress, emailError, 'Please enter a valid email address.');
-      } else {
-        hideError(emailAddress, emailError);
-      }
+    emailAddress.addEventListener('input', function () {
+        if (!emailRegex.test(emailAddress.value)) {
+            showError(emailAddress, emailError, 'Please enter a valid email address.');
+        } else {
+            hideError(emailAddress, emailError);
+        }
     });
 
     // Form submission event handler
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-      // Perform a final validation on all fields before submission
-      if (!nameRegex.test(firstName.value)) {
-        showError(firstName, firstNameError, 'Please enter a valid First Name (alphabets only).');
-        return;
-      }
+        // Perform a final validation on all fields before submission
+        if (!nameRegex.test(firstName.value)) {
+            showError(firstName, firstNameError, 'Please enter a valid First Name (alphabets only).');
+            return;
+        }
 
-      if (!nameRegex.test(lastName.value)) {
-        showError(lastName, lastNameError, 'Please enter a valid Last Name (alphabets only).');
-        return;
-      }
+        if (!nameRegex.test(lastName.value)) {
+            showError(lastName, lastNameError, 'Please enter a valid Last Name (alphabets only).');
+            return;
+        }
 
-      if (!phoneRegex.test(phoneNumber.value)) {
-        showError(phoneNumber, phoneError, 'Please enter a valid 10-digit phone number.');
-        return;
-      }
+        if (!phoneRegex.test(phoneNumber.value)) {
+            showError(phoneNumber, phoneError, 'Please enter a valid 10-digit phone number.');
+            return;
+        }
 
-      if (!emailRegex.test(emailAddress.value)) {
-        showError(emailAddress, emailError, 'Please enter a valid Email Address.');
-        return;
-      }
+        if (!emailRegex.test(emailAddress.value)) {
+            showError(emailAddress, emailError, 'Please enter a valid Email Address.');
+            return;
+        }
 
-      // If all validations pass
-      alert('Form submitted successfully!');
+        // If all validations pass
+        alert('Form submitted successfully!');
     });
-  });
+});
+
+
+//toggle button js
+
+let menuToggle = document.querySelector(".toggle");
+menuToggle.onclick = function () {
+    menuToggle.classList.toggle("active")
+}
