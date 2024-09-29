@@ -160,6 +160,48 @@ document.addEventListener('DOMContentLoaded', function () {
 //toggle button js
 
 let menuToggle = document.querySelector(".toggle");
+let sidebar = document.querySelector(".sidebar");
+let sidebarLinks = document.querySelectorAll(".sidebar a"); // Select all anchor tags inside the sidebar
+let body = document.body; // Reference to the body element
+
+// Toggle the sidebar when the menu button is clicked
 menuToggle.onclick = function () {
-    menuToggle.classList.toggle("active")
+    menuToggle.classList.toggle("active");
+    sidebar.classList.toggle("active");
+
+    // Prevent body scroll when sidebar is active
+    if (sidebar.classList.contains("active")) {
+        body.classList.add("no-scroll"); // Add class to body
+    } else {
+        body.classList.remove("no-scroll"); // Remove class from body
+    }
 }
+
+// Close the sidebar and scroll to the section when any anchor link is clicked
+sidebarLinks.forEach(link => {
+    link.addEventListener('click', function (event) {
+        // Remove 'active' class to close the sidebar
+        sidebar.classList.remove("active");
+        menuToggle.classList.remove("active");
+
+        // Allow a small delay for the sidebar to close before scrolling
+        setTimeout(() => {
+            // Scroll to the section based on the anchor href
+            const targetId = this.getAttribute('href'); // Get the href attribute value (section ID)
+            const targetSection = document.querySelector(targetId); // Find the target section
+
+            if (targetSection) {
+                // Scroll to the section smoothly
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+
+                // After scrolling, allow the body to scroll again
+                setTimeout(() => {
+                    body.classList.remove("no-scroll"); // Remove no-scroll class after scrolling
+                }, 300); // Adjust based on the scrolling speed
+            }
+        }, 300); // Delay for the sidebar to close
+    });
+});
+
+
+
