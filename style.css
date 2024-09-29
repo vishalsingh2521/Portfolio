@@ -168,6 +168,7 @@ a.btn:hover {
     padding: 1.5rem;
     left: -600px;
     transition: transform 0.5s ease-in-out;
+    display: none;
 }
 
 .sidebar.active {
@@ -195,8 +196,8 @@ a.btn:hover {
 
 .sidebar .social-icon {
     position: absolute;
-    top: 80%;
-    width: 90%;
+    top: 70%;
+    width: 88%;
     justify-content: space-between;
 }
 
@@ -782,6 +783,10 @@ textarea.error {
 
     .toggle {
         display: flex;
+    }
+
+    .sidebar{
+        display: block;
     }
 
     .head-left img {
