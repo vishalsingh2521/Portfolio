@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vishal- Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="images/favicon.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
     <header>
         <div class="container">
             <div class="head-left">
-                <a href="#"><img src="images/logo-white.png" alt="Logo"></a>
+                <a href="#"><img src="images/logo-white.webp" loading="lazy" alt="Logo"></a>
                 <a class="pmail" href="mailto:vishalsingh.2531@gmail.com">vishalsingh.2531@gmail.com</a>
             </div>
             <div class="head-right">
@@ -37,8 +37,10 @@
     <section>
         <div class="intro">
             <div class="content-box" data-aos="fade-right" data-aos-duration="1500">
-                <h3>Hi, I am Vishal</h3>
-                <h1 class="grad-txt">A UI Developer</h1>
+                <div class="maintxt">
+                    <h3>Hi, I am Vishal</h3>
+                    <h1 class="grad-txt">A UI Developer</h1>
+                </div>
                 <p>"I create visually stunning and sophisticated user interfaces that enhance the experience of websites."</p>
                 <div class="icons-main">
                     <a href="images/VISHAL-KUMAR.docx" download>Download CV <i class="fa-solid fa-download"></i></a>
@@ -52,7 +54,7 @@
             </div>
             <div class="img-box">
                 <div class="main-img">
-                    <img src="images/self.png">
+                    <img src="images/self.webp" loading="lazy">
                 </div>
             </div>
         </div>
@@ -167,23 +169,23 @@
             </div>
             <div class="badges">
                 <div class="icon" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
-                    <img src="images/html.png" alt="">
+                    <img src="images/html.webp" loading="lazy" alt="">
                     <p>Html</p>
                 </div>
                 <div class="icon" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="800">
-                    <img src="images/css.png" alt="">
+                    <img src="images/css.webp" loading="lazy" alt="">
                     <p>Css</p>
                 </div>
                 <div class="icon" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
-                    <img src="images/javascript.png" alt="">
+                    <img src="images/javascript.webp" loading="lazy" alt="">
                     <p>JavaScript</p>
                 </div>
                 <div class="icon" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="800">
-                    <img src="images/bootstrap.png" alt="">
+                    <img src="images/bootstrap.webp" loading="lazy" alt="">
                     <p>Bootstrap</p>
                 </div>
                 <div class="icon" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
-                    <img src="images/wordpress.png" alt="">
+                    <img src="images/wordpress.webp" loading="lazy" alt="">
                     <p>Wordpress</p>
                 </div>
             </div>
@@ -191,20 +193,35 @@
     </section>
     <!----------------skills section---------------->
 
-    <!----------------skills section---------------->
+    <!----------------contact section---------------->
     <section>
         <div class="contact" id="contact">
             <div class="form-main" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800">
                 <h2 class="grad-txt">Let’s work together!</h2>
                 <p>I design and code beautifully simple things and i love what i do. Just simple like that!</p>
-                <form action="">
+                <form id="contactForm" novalidate>
                     <div class="int">
-                        <input type="text" placeholder="First Name">
-                        <input type="text" placeholder="Last Name">
-                        <input type="text" placeholder="Phone Number">
-                        <input type="text" placeholder="Email Address">
+                        <!-- First Name Input -->
+                        <input type="text" id="firstName" placeholder="First Name" required>
+                        <span id="firstNameError" class="error-message"></span>
+
+                        <!-- Last Name Input -->
+                        <input type="text" id="lastName" placeholder="Last Name" required>
+                        <span id="lastNameError" class="error-message"></span>
+
+                        <!-- Phone Number Input -->
+                        <input type="text" id="phoneNumber" placeholder="Phone Number" required maxlength="10">
+                        <span id="phoneError" class="error-message"></span>
+
+                        <!-- Email Address Input -->
+                        <input type="text" id="emailAddress" placeholder="Email Address" required>
+                        <span id="emailError" class="error-message"></span>
                     </div>
-                    <textarea name="" id="" cols="30" rows="6" aria-invalid="false" placeholder="Message" maxlength="1000"></textarea>
+
+                    <!-- Message Textarea -->
+                    <textarea id="message" cols="30" rows="6" placeholder="Message" maxlength="1000" required></textarea>
+                    <span id="messageError" class="error-message"></span>
+
                     <button type="submit">Send Message</button>
                 </form>
             </div>
@@ -237,6 +254,19 @@
             </div>
         </div>
     </section>
+
+    <footer>
+        <a href="#"><img src="images/logo-white.webp" loading="lazy" alt=""></a>
+        <div class="head-right">
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <p>© 2024 All Rights Reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

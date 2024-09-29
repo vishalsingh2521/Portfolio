@@ -8,7 +8,7 @@
     scroll-behavior: smooth;
 }
 
-body{
+body {
     overflow-x: hidden;
 }
 
@@ -622,4 +622,278 @@ form button:hover {
     color: #fff;
     font-size: 18px;
     margin-bottom: 16px;
+}
+
+/*--------------contact section ends*--------------*/
+
+/*--------------footer section starts*--------------*/
+footer {
+    background: #000;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+footer a img {
+    width: 70px;
+}
+
+footer .head-right ul {
+    margin: 0 auto;
+    width: 40%;
+}
+
+footer .head-right {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+footer p {
+    color: violet;
+    font-size: 14px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.85em;
+    display: none;
+}
+
+input.error,
+textarea.error {
+    border: 1px solid red;
+}
+
+@media only screen and (max-width: 479px) {
+
+    /*--------------header section starts*--------------*/
+
+    .head-right {
+        display: none;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    /*--------------header section ends*--------------*/
+
+    /*--------------intro section starts*--------------*/
+    .intro {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        position: relative;
+    }
+
+    .content-box {
+        width: 100%;
+    }
+
+    .content-box h3 {
+        font-size: 24px;
+    }
+
+    .content-box h1 {
+        font-size: 32px;
+    }
+
+    .content-box p {
+        font-size: 18px;
+    }
+
+    .icons-main {
+        padding-top: 1.5rem;
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: baseline;
+    }
+
+    .icon-packs {
+        width: 70%;
+        justify-content: space-between;
+    }
+
+
+    .maintxt {
+        margin-bottom: 27rem;
+    }
+
+    .main-img img {
+        width: 300px;
+    }
+
+    .img-box {
+        position: absolute;
+        width: 100%;
+        top: 10rem;
+    }
+
+    /*--------------intro section ends*--------------*/
+
+    /*--------------counter section sarts*--------------*/
+
+    .counter {
+        padding: 2rem 1rem;
+        justify-content: space-between;
+        row-gap: 20px;
+    }
+
+    .count-box h2 {
+        font-size: 30px;
+    }
+
+    .count-box p {
+        font-size: 16px;
+    }
+
+    .count-box {
+        column-gap: 10px;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    /*--------------counter section ends*--------------*/
+
+
+    /*--------------services section sarts*--------------*/
+    h2.grad-txt {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .services-main p {
+        width: 100%;
+    }
+
+    .services-main {
+        padding: 2rem 1rem;
+    }
+
+    .service-dis.active::before {
+        background-image: linear-gradient(to right, #8750f7 15%, #2a1454 90%);
+    }
+
+    .service-dis {
+        flex-direction: column;
+        padding: 20px 15px;
+        width: 100%;
+        align-items: start;
+    }
+
+    .number {
+        font-size: 22px;
+    }
+
+    .service-dis h3 {
+        font-size: 24px;
+    }
+
+    .num-left {
+        column-gap: 10px;
+    }
+
+    /*--------------services section ends*--------------*/
+
+    /*--------------experience section starts*--------------*/
+
+    .experience {
+        padding: 2rem 1rem;
+        flex-direction: column;
+    }
+
+    .my-experience {
+        width: 100%;
+    }
+
+    .ex-head {
+        justify-content: center;
+    }
+
+    .ex-head i {
+        font-size: 30px;
+    }
+
+    .ex-box {
+        width: 100%;
+    }
+
+    .my-education {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /*--------------experience section ends*--------------*/
+
+    /*--------------skills section starts*--------------*/
+
+    .skills {
+        padding: 2rem 1rem;
+    }
+
+    .skills p {
+        width: 100%;
+    }
+
+    .badges {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .badges {}
+
+    .icon {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    /*--------------skills section ends*--------------*/
+
+    /*--------------skills section starts*--------------*/
+
+    .contact {
+        padding: 2rem 1rem;
+        flex-direction: column;
+        background: linear-gradient(90deg, rgba(15, 7, 21, 1) 16%, rgba(16, 8, 24, 1) 77%, rgba(39, 22, 67, 1) 121%);
+        align-items: start;
+    }
+
+    .form-main {
+        width: 100%;
+    }
+
+    .form-main p {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 1rem;
+    }
+
+    .contact input {
+        width: 100%;
+    }
+
+    .info {
+        width: 100%;
+        margin-top: 3rem;
+        overflow-x: hidden;
+    }
+
+    .info-child {
+        margin: 0;
+    }
+
+    /*--------------skills section ends*--------------*/
+
+    /*--------------footer section starts*--------------*/
+
+    footer {
+        padding: 2rem 1rem;
+    }
+
+    footer .head-right {
+        display: flex;
+    }
+
+    footer .head-right ul {
+        width: 100%;
+        justify-content: space-between;
+    }
 }
