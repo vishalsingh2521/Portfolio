@@ -195,10 +195,18 @@ a.btn:hover {
 }
 
 .sidebar .social-icon {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.sidebar .info-child {
     position: absolute;
     bottom: 22.5%;
-    width: 88%;
-    justify-content: space-between;
+}
+
+.sidebar .numbers a {
+    color: #1B0F2C;
+    font-size: 14px;
 }
 
 /*-----------------header end---------------------*/
@@ -669,7 +677,7 @@ form button:hover {
 .social {
     display: flex;
     align-items: center;
-    column-gap: 20px;
+    column-gap: 10px;
     color: #fff;
 }
 
@@ -1057,7 +1065,7 @@ textarea.error {
     /*--------------contact section starts*--------------*/
 
     .social i {
-        font-size: 18Spx
+        font-size: 18px;
     }
 
     .numbers a {
