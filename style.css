@@ -1183,6 +1183,10 @@ textarea.error {
         column-gap: 10px;
     }
 
+    .services-main p.quality-para {
+        width: 95%;
+    }
+
     /*--------------services section ends*--------------*/
 
     /*--------------experience section starts*--------------*/
