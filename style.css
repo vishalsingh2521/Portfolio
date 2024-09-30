@@ -43,13 +43,13 @@ body a {
     display: flex;
     align-items: center;
     width: 60%;
-    gap: 30px;
+    justify-content: space-between;
 }
 
 .head-right ul {
     display: flex;
     list-style: none;
-    width: 70%;
+    width: 100%;
     justify-content: space-around;
 }
 
@@ -173,6 +173,7 @@ a.btn:hover {
 
 .sidebar.active {
     transform: translateX(600px);
+    border-radius: 10px;
 }
 
 .sidebar ul {
@@ -406,6 +407,8 @@ h2.grad-txt {
 .service-dis p {
     text-align: left;
     margin: 0;
+    width: 58%;
+
 }
 
 .num-left {
@@ -431,6 +434,7 @@ h2.grad-txt {
 
 .my-education {
     width: 48%;
+    overflow: hidden;
 }
 
 .ex-head {
@@ -672,6 +676,7 @@ form button:hover {
 
 .info {
     width: 48%;
+    overflow: hidden;
 }
 
 .social {
@@ -768,6 +773,265 @@ textarea.error {
     border: 1px solid red;
 }
 
+@media only screen and (max-width: 1200px) {
+
+    .count-box h2 {
+        font-size: 54px;
+    }
+
+    .service-dis h3 {
+        font-size: 22px;
+    }
+
+    .badges {
+        width: 95%;
+    }
+
+    .icon {
+        width: 18%;
+    }
+
+    .icons-main .icon-packs {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .content-box h3 {
+        font-size: 24px;
+    }
+
+    .content-box h1 {
+        font-size: 45px;
+    }
+
+    .content-box p {
+        font-size: 16px;
+    }
+
+    .img-box {
+        width: 40%;
+        justify-content: end;
+    }
+
+    .main-img img {
+        width: 320px;
+    }
+
+
+    .content-box {
+        width: 60%;
+    }
+
+    .counter {
+        justify-content: space-between;
+    }
+
+    .count-box h2 {
+        font-size: 45px;
+    }
+
+    .num-left {
+        column-gap: 10px;
+    }
+
+    .service-dis h3 {
+        font-size: 20px;
+    }
+
+    .ex-head i,
+    h2.grad-txt {
+        font-size: 38px;
+    }
+
+
+    .ex-box {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .content-box {
+        width: 50%;
+    }
+
+    .main-img img {
+        width: 100%;
+    }
+
+    .icons-main {
+        flex-direction: column;
+        align-items: start;
+        row-gap: 20px;
+    }
+
+    .icons-main .icon-packs {
+        width: 70%;
+        justify-content: space-between;
+    }
+
+    .counter {
+        padding: 4rem 1rem;
+    }
+
+    .count-box {
+        column-gap: 10px;
+    }
+
+    .count-box h2 {
+        font-size: 36px;
+    }
+
+    .count-box p {
+        font-size: 15px;
+    }
+
+    h2.grad-txt {
+        font-size: 34px;
+    }
+
+    .services-main p.quality-para {
+        width: 70%;
+    }
+
+    .service-dis p {
+        width: 55%;
+    }
+
+    .service-dis {
+        padding: 10px;
+    }
+
+    .num-left {}
+
+    .number {
+        font-size: 20px;
+    }
+
+    .ex-box h6 {
+        font-size: 18px;
+    }
+
+    .ex-box h5 {
+        font-size: 24px;
+    }
+
+    .ex-box {
+        width: 95%;
+    }
+
+    .badges {
+        width: 100%;
+    }
+
+
+    .icon {
+        padding: 15px 5px;
+    }
+
+    .icon p {
+        font-size: 14px;
+    }
+
+    .icon img {
+        width: 60px;
+    }
+
+    .form-main p {
+        font-size: 14px;
+        margin: 0 0 1rem;
+    }
+
+    .contact input {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+
+    .services-main {
+        padding: 4rem 1rem;
+    }
+
+    .service-dis {
+        width: 100%;
+    }
+
+    .experience {
+        padding: 4rem 1rem;
+    }
+
+    .my-experience {
+        width: 50%;
+    }
+
+    .my-education {
+        width: 50%;
+    }
+
+    .content-box h1 {
+        font-size: 40px;
+    }
+
+    .head-left {
+        gap: 10px;
+    }
+
+    .head-right {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+
+    .count-box {
+        width: 50%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .counter {
+        row-gap: 20px;
+    }
+
+    .ex-head i,
+    h2.grad-txt {
+        font-size: 30px;
+    }
+
+    .ex-box p {
+        font-size: 14px;
+    }
+
+    .contact {
+        flex-direction: column;
+        background: linear-gradient(90deg, rgba(15, 7, 21, 1) 16%, rgba(16, 8, 24, 1) 77%, rgba(39, 22, 67, 1) 121%);
+    }
+
+    .form-main {
+        width: 100%;
+    }
+
+    .info {
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    .info-child {
+        margin: 0;
+    }
+
+    .container {
+        padding: 2rem 0.5rem 1rem 0.5rem;
+    }
+
+    .content-box h1 {
+        font-size: 36px;
+    }
+}
+
+
 @media only screen and (max-width: 479px) {
 
     /*--------------header section starts*--------------*/
@@ -793,7 +1057,7 @@ textarea.error {
         display: flex;
     }
 
-    .sidebar{
+    .sidebar {
         display: block;
     }
 
@@ -851,6 +1115,7 @@ textarea.error {
         position: absolute;
         width: 100%;
         top: 10rem;
+        justify-content: center;
     }
 
     /*--------------intro section ends*--------------*/
